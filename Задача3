@@ -1,0 +1,18 @@
+a=(input())
+c=0
+b=[]
+f=[]
+for i in range(len(a)):
+    if int(a[i])%2==0:
+        c=int(a[i])
+        b.append(c)
+        i+=1
+b=sorted(b)
+for i in range(len(a)):
+    if int(a[i])%2!=0:
+        c=int(a[i])
+        f.append(c)
+        i+=1
+f=sorted(f)
+f.reverse()
+print(b+f)
