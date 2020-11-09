@@ -1,0 +1,23 @@
+a=input('Исходная строка:')
+g=input('Новыя подстрока:')
+e=[]
+b=[]
+c=0
+d=0
+f=[]
+for i in range(len(a)):
+    if a[i]=="[":
+        c+=1
+        for i in range(i+1,len(a)):
+            if a[i] == "[":
+                c+=1
+            elif a[i] == "]":
+                d+=1
+            if c==d:
+                break
+        for i in range (i+1, len(a)):
+           f.append(a[i])
+        break
+    b.append(a[i])
+print(''.join(b)+''.join(g)+''.join(f))
+
